@@ -1,0 +1,11 @@
+data:[
+{
+value: 134,
+name: '7天标的',
+itemStyle: {
+normal: {
+color: '#01FFFF'
+}
+}
+}
+]

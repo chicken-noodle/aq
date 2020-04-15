@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .d_main {
+            width: 80%;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script>
+
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        var option1 = {
+            backgroundColor: "#192138",
+            color: ['#3398DB'],
+            textStyle: {
+                color: '#FFF'  //全局字体颜色，不设置则每个扇形的字和扇形颜色一致
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '14%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    name: "天数（天）",
+                    type: 'category',
+                    data: ['7天', '30天', '45天'],
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    name: "人数（人）",
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+//                name:'直接访问',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: []
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+        $.get('data.json').done(function () {
+            // 填入数据
+            var data = [1, 2, 3];
+            var myData = [];
+            var myTemp;
+            var colorList1 = ['#01FFFF', '#FFCA00', '#C0FF00'];
+            for (var i = 0; i < data.length; i++) {
+                myTemp = {value: data[i], itemStyle: {normal: {color: colorList1[i]}}};
+                myData.push(myTemp);
+            }
+//            console.log(myData);
+            myChart1.setOption({
+                series: [{
+                    data: myData
+                }]
+            });
+        });
+
+    </script>
+
+</head>
+
+
+<body>
+<div class="d_main" id="main1"></div>
+</body>
+</html>

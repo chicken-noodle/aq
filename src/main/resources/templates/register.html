@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <!-- Mobile specific metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Force IE9 to render in normal mode -->
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="author" content="SuggeElson"/>
+    <meta name="description" content=""
+    />
+    <meta name="keywords" content=""
+    />
+    <meta name="application-name" content="sprFlat admin template"/>
+    <!-- Import google fonts - Heading first/ text second -->
+    <link rel='stylesheet' type='text/css'
+          href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Droid+Sans:400,700'/>
+    <!--[if lt IE 9]>
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+<![endif]-->
+    <!-- Css files -->
+    <!-- Icons -->
+    <link href="assets/css/icons.css" rel="stylesheet"/>
+    <!-- jQueryUI -->
+    <link href="assets/css/sprflat-theme/jquery.ui.all.css" rel="stylesheet"/>
+    <!-- Bootstrap stylesheets (included template modifications) -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <!-- Plugins stylesheets (all plugin custom css) -->
+    <link href="assets/css/plugins.css" rel="stylesheet"/>
+    <!-- Main stylesheets (template main css file) -->
+    <link href="assets/css/main.css" rel="stylesheet"/>
+    <!-- Custom stylesheets ( Put your own changes here ) -->
+    <link href="assets/css/custom.css" rel="stylesheet"/>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/img/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/img/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/img/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="icon" href="assets/img/ico/favicon.ico" type="image/png">
+    <!-- Windows8 touch icon ( http://www.buildmypinnedsite.com/ )-->
+    <meta name="msapplication-TileColor" content="#3399cc"/>
+    <script>
+        function jump() {
+            window.location.href = "/toLogin";
+        }
+    </script>
+</head>
+<body class="login-page">
+<!-- Start #login -->
+<div id="login" class="animated bounceIn">
+    <!-- Start .login-wrapper -->
+    <div class="login-wrapper">
+
+        <div id="myTabContent" class="tab-content bn">
+            <div class="tab-pane fade active in" id="log-in">
+                <center><i class="ec-users s16"></i>用户注册</center>
+                <div class="seperator">
+
+                </div>
+                <form class="form-horizontal mt10" action="/reg" id="register-form" method="post">
+
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="text" name="name" class="form-control left-icon" placeholder="姓名">
+                            <i class="im-github s16 left-input-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="text" name="username" class="form-control left-icon" placeholder="用户名">
+                            <i class="ec-user s16 left-input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="password" name="password" class="form-control left-icon" placeholder="密码">
+                            <i class="ec-locked s16 left-input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="password" class="form-control left-icon" placeholder="确认密码">
+                            <i class="ec-locked s16 left-input-icon"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-12">
+                            <input type="text" name="tea_account" class="form-control left-icon" placeholder="绑定班级号">
+                            <i class="im-checkbox-checked s16 left-input-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8">
+                            <!-- col-lg-12 start here -->
+                        </div>
+                        <!-- col-lg-12 end here -->
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
+                            <!-- col-lg-12 start here -->
+                            <input class="btn btn-success pull-right" type="submit">
+                            <input type="button" value="返回登录" class="btn btn-primary pull-right"
+                                   style="margin-right:10%" onclick=javascrtpt:jump()>
+                        </div>
+                        <!-- col-lg-12 end here -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- End #.login-wrapper -->
+    </div>
+    <!-- End #login -->
+    <!-- Javascripts -->
+    <!-- Load pace first -->
+    <script src="assets/plugins/core/pace/pace.min.js"></script>
+    <!-- Important javascript libs(put in all pages) -->
+    <script src="assets/js/jquery-1.8.3.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/libs/jquery-2.1.1.min.js">\x3C/script>')
+    </script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="assets/js/libs/jquery-ui-1.10.4.min.js">\x3C/script>')
+    </script>
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="assets/js/libs/excanvas.min.js"></script>
+<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="assets/js/libs/respond.min.js"></script>
+<![endif]-->
+    <!-- Bootstrap plugins -->
+    <script src="assets/js/bootstrap/bootstrap.js"></script>
+    <!-- Form plugins -->
+    <script src="assets/plugins/forms/icheck/jquery.icheck.js"></script>
+    <script src="assets/plugins/forms/validation/jquery.validate.js"></script>
+    <script src="assets/plugins/forms/validation/additional-methods.min.js"></script>
+    <!-- Init plugins olny for this page -->
+    <script src="assets/js/pages/login.js"></script>
+</body>
+</html>
